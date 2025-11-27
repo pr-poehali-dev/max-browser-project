@@ -174,9 +174,11 @@ const Index = () => {
           onClick={handleGosuslugi}
           className="fixed bottom-8 right-8 bg-gradient-to-r from-[#2196F3] to-[#1E88E5] hover:from-[#1E88E5] hover:to-[#1976D2] shadow-lg shadow-blue-500/40 rounded-full px-6 py-6 flex items-center gap-3 text-lg font-semibold hover:-translate-y-1 transition-transform duration-300"
         >
-          <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-[#2196F3] font-bold">
-            Г
-          </div>
+          <img 
+            src="https://avatars.mds.yandex.net/i?id=0fcdf4d48d3a175f5051ec677cbc60f4_l-5603780-images-thumbs&n=13" 
+            alt="Госуслуги" 
+            className="w-8 h-8 rounded-full object-cover"
+          />
           <span>Войти через Госуслуги</span>
         </Button>
 
