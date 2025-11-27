@@ -69,9 +69,7 @@ const Index = () => {
         </header>
 
         <section className="flex flex-col items-center text-center py-16">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#64FFDA] to-[#18FFFF] bg-clip-text text-transparent">
-            MAX Браузер - Только русский язык
-          </h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#64FFDA] to-[#18FFFF] bg-clip-text text-transparent">MAX Браузер - Добро Пожаловать!!!</h2>
           <p className="text-xl max-w-3xl mb-12 leading-relaxed text-white/90">
             Новый уникальный браузер для комфортного и безопасного просмотра на русском языке. Без английских надписей и с удобной интеграцией с Госуслугами.
           </p>
