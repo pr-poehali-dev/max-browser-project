@@ -183,7 +183,7 @@ const Index = () => {
         </Button>
 
         <footer className="text-center py-12 mt-16 border-t border-white/20">
-          <p className="text-white/70">© 2023 MAX Браузер. Все права защищены.</p>
+          <p className="text-white/70">© 2025 MAX Браузер. Все права защищены.</p>
         </footer>
       </div>
     </div>
