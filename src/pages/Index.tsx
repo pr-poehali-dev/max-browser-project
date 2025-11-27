@@ -8,6 +8,7 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [addressBarUrl, setAddressBarUrl] = useState('https://maxбраузер.рус');
   const [showWarning, setShowWarning] = useState(false);
+  const [showMusic, setShowMusic] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -131,11 +132,35 @@ const Index = () => {
                   <Icon name="Video" size={32} className="mx-auto mb-2 text-[#2196F3]" />
                   <p className="text-sm font-medium text-gray-700">Видео</p>
                 </Card>
-                <Card className="p-4 text-center hover:shadow-lg transition-shadow cursor-pointer bg-white border-gray-200">
-                  <Icon name="ShoppingBag" size={32} className="mx-auto mb-2 text-[#2196F3]" />
-                  <p className="text-sm font-medium text-gray-700">Покупки</p>
+                <Card 
+                  onClick={() => setShowMusic(!showMusic)}
+                  className="p-4 text-center hover:shadow-lg transition-shadow cursor-pointer bg-white border-gray-200"
+                >
+                  <Icon name="Music" size={32} className="mx-auto mb-2 text-[#2196F3]" />
+                  <p className="text-sm font-medium text-gray-700">Музыка</p>
                 </Card>
               </div>
+
+              {showMusic && (
+                <div className="mt-8 p-6 bg-white rounded-lg shadow-lg">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#2196F3] to-[#1E88E5] rounded-lg flex items-center justify-center">
+                      <Icon name="Music" size={32} className="text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-[#1a237e]">Я русский</h4>
+                      <p className="text-gray-600">Исполнитель</p>
+                    </div>
+                  </div>
+                  <audio 
+                    controls 
+                    className="w-full"
+                    src="https://rus.hitmotop.com/get/music/20240122/SHaman_-_JA_russkijj_76835909.mp3"
+                  >
+                    Ваш браузер не поддерживает аудио элемент.
+                  </audio>
+                </div>
+              )}
             </div>
           </Card>
         </section>
