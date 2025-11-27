@@ -183,6 +183,12 @@ const Index = () => {
         </Button>
 
         <footer className="text-center py-12 mt-16 border-t border-white/20">
+          <div className="mb-6 p-6 bg-yellow-500/20 border-2 border-yellow-400 rounded-lg max-w-3xl mx-auto">
+            <p className="text-yellow-300 font-bold text-xl mb-2">⚠️ ВНИМАНИЕ!</p>
+            <p className="text-white text-lg">
+              Это не настоящий MAX Браузер!!! Это шуточный браузер!!!
+            </p>
+          </div>
           <p className="text-white/70">© 2025 MAX Браузер. Все права защищены.</p>
         </footer>
       </div>
