@@ -119,7 +119,7 @@ const Index = () => {
                 </div>
               )}
 
-              <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="mt-8 grid grid-cols-2 md:grid-cols-5 gap-4">
                 <Card className="p-4 text-center hover:shadow-lg transition-shadow cursor-pointer bg-white border-gray-200">
                   <Icon name="Newspaper" size={32} className="mx-auto mb-2 text-[#2196F3]" />
                   <p className="text-sm font-medium text-gray-700">Новости</p>
@@ -138,6 +138,13 @@ const Index = () => {
                 >
                   <Icon name="Music" size={32} className="mx-auto mb-2 text-[#2196F3]" />
                   <p className="text-sm font-medium text-gray-700">Музыка</p>
+                </Card>
+                <Card 
+                  onClick={() => window.open('https://max.ru', '_blank')}
+                  className="p-4 text-center hover:shadow-lg transition-shadow cursor-pointer bg-white border-gray-200"
+                >
+                  <Icon name="MessageCircle" size={32} className="mx-auto mb-2 text-[#2196F3]" />
+                  <p className="text-sm font-medium text-gray-700">Мессенджер</p>
                 </Card>
               </div>
 
