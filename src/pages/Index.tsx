@@ -71,9 +71,17 @@ const Index = () => {
 
         <section className="flex flex-col items-center text-center py-16">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#64FFDA] to-[#18FFFF] bg-clip-text text-transparent">MAX Браузер - Добро Пожаловать!!!</h2>
-          <p className="text-xl max-w-3xl mb-12 leading-relaxed text-white/90">
+          <p className="text-xl max-w-3xl mb-8 leading-relaxed text-white/90">
             Новый уникальный браузер для комфортного и безопасного просмотра на русском языке. Без английских надписей и с удобной интеграцией с Госуслугами.
           </p>
+          
+          <Button
+            onClick={() => window.open('https://browser-creation-project-1--preview.poehali.dev/', '_blank')}
+            className="mb-8 bg-gradient-to-r from-[#64FFDA] to-[#18FFFF] text-[#1a237e] hover:from-[#18FFFF] hover:to-[#64FFDA] font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+          >
+            <Icon name="Download" size={24} className="mr-2" />
+            Скачать Nikbrowser
+          </Button>
 
           <Card className="w-full max-w-5xl bg-[#2c3e50] border-0 overflow-hidden shadow-2xl">
             <div className="bg-[#1a237e] p-4 flex items-center gap-4">
