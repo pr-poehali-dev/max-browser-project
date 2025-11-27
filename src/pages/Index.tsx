@@ -102,11 +102,23 @@ const Index = () => {
           
           <Button
             onClick={handleInstallApp}
-            className="mb-8 bg-gradient-to-r from-[#64FFDA] to-[#18FFFF] text-[#1a237e] hover:from-[#18FFFF] hover:to-[#64FFDA] font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="mb-4 bg-gradient-to-r from-[#64FFDA] to-[#18FFFF] text-[#1a237e] hover:from-[#18FFFF] hover:to-[#64FFDA] font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
             <Icon name="Download" size={24} className="mr-2" />
-            Скачать Nikbrowser
+            Установить Nikbrowser
           </Button>
+
+          <div className="mb-8 p-6 bg-white/10 rounded-lg max-w-2xl backdrop-blur-sm">
+            <p className="text-white/90 text-sm mb-3 font-semibold">📱 Как установить приложение:</p>
+            <div className="text-left text-white/80 text-sm space-y-2">
+              <p><strong>На Android Chrome:</strong></p>
+              <p>1️⃣ Нажмите кнопку выше или меню (⋮) → "Установить приложение"</p>
+              <p>2️⃣ Подтвердите установку → Готово! 🎉</p>
+              <p className="mt-3"><strong>На iPhone Safari:</strong></p>
+              <p>1️⃣ Нажмите "Поделиться" (□↑)</p>
+              <p>2️⃣ Выберите "На экран Домой" → Готово! 🎉</p>
+            </div>
+          </div>
 
           <Card className="w-full max-w-5xl bg-[#2c3e50] border-0 overflow-hidden shadow-2xl">
             <div className="bg-[#1a237e] p-4 flex items-center gap-4">
