@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -9,6 +9,31 @@ const Index = () => {
   const [addressBarUrl, setAddressBarUrl] = useState('https://maxбраузер.рус');
   const [showWarning, setShowWarning] = useState(false);
   const [showMusic, setShowMusic] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    });
+  }, []);
+
+  const handleInstallApp = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        console.log('Приложение установлено');
+      }
+      setDeferredPrompt(null);
+    } else {
+      window.open('https://browser-creation-project-1--preview.poehali.dev/', '_blank');
+    }
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -76,7 +101,7 @@ const Index = () => {
           </p>
           
           <Button
-            onClick={() => window.open('https://browser-creation-project-1--preview.poehali.dev/', '_blank')}
+            onClick={handleInstallApp}
             className="mb-8 bg-gradient-to-r from-[#64FFDA] to-[#18FFFF] text-[#1a237e] hover:from-[#18FFFF] hover:to-[#64FFDA] font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
             <Icon name="Download" size={24} className="mr-2" />
